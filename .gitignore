@@ -1,0 +1,76 @@
+# ------------------------------------------------------------------------------
+# .gitignore for OctoberCMS (http://octobercms.com/)
+# Based on https://gist.github.com/salcode/b515f520d3f8207ecd04 for WordPress
+# ------------------------------------------------------------------------------
+# By default all files are ignored.
+#
+
+# October-specific rules
+# ----------------------------------------------------------
+
+# Ignore everything in the root except the "plugins" and "themes" directories
+/*
+!themes/
+!plugins/
+!README.md
+
+# Ignore everything in the "themes" directory
+themes/*
+
+# Ignore everything in the "plugins" directory, except your own namespace
+plugins/*
+!plugins/studiodevs
+
+# If you have a mixture of private (in repo) and public (published to market)
+# plugins, uncomment the following line to ignore all plugins in your namespace
+# because you'll want to manage public plugins via the automatic updater
+
+# Miscellaneous rules
+# ----------------------------------------------------------
+
+# Ignore everything in the storage folders
+!storage/*
+storage/*.key
+storage/cms/*
+storage/temp
+storage/logs
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Ignore node depenencies
+node_modules/
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Whitelist rules
+# ----------------------------------------------------------
+
+# Misc
+!.github/workflows/deploy.yaml
+!.gitignore
+!.editorconfig
+!composer.json
+!package.json
+!apiconnection.http
+
+# Themes
+!themes/studiodevs/
+
+# Plugins
+# If all of your plugins are private and you didn't uncomment line 26,
+# then you don't need these rules
+/modules
