@@ -1,0 +1,42 @@
+<script src="{{ ['@framework','@framework.extras'] |theme}}"></script>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Mateusz Rycombel">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{ this.page.title }}</title>
+    <meta content="StudioDEVS" name="description">
+    <meta content="studiodevs" name="keywords">
+    <!-- OG -->
+    <meta property="og:title" content="{{ this.page.title }}">
+
+    <!-- Favicons -->
+    {# <link href="{{ 'assets/img/favicon_blue.png' | theme }}" rel="icon">
+    <link href="{{ 'assets/img/favicon_blue.png' | theme }}" rel="apple-touch-icon"> #}
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{'assets/vendor/bootstrap/css/bootstrap.min.css' | theme }}" rel="stylesheet">
+    <link href="{{'assets/vendor/bootstrap-icons/bootstrap-icons.css' | theme }}" rel="stylesheet">
+    <link href="{{'assets/vendor/boxicons/css/boxicons.min.css' | theme }}" rel="stylesheet">
+    <link href="{{'assets/vendor/glightbox/css/glightbox.min.css' | theme }}" rel="stylesheet">
+    <link href="{{'assets/vendor/remixicon/remixicon.css' | theme }}" rel="stylesheet">
+    <link href="{{'assets/vendor/swiper/swiper-bundle.min.css' | theme }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{'assets/css/style.css' | theme }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b577f4961.js" crossorigin="anonymous"></script>
+
+    {% styles %}
+
+</head>
+
+<body>
+    {% page %}
+</body>
+
+</html>
