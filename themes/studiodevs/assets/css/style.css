@@ -1,6 +1,7 @@
-.maintenance {
-    background-image: url("../images/stdevs_background.jpg");
-    background-size: cover;
-    height: 100vh;
-    width: 100vh;
+body {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #444444;
 }
