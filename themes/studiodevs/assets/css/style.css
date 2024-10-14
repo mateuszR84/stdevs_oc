@@ -5,3 +5,24 @@ body {
     font-style: normal;
     color: #444444;
 }
+
+.section-bg {
+    background-color: #f3f5fa;
+}
+
+.footer {
+    background-color: #011936;
+    color: #9FC490;
+}
+
+.footer ul {
+    color: #9FC490 !important;
+}
+
+.newsletter-button {
+    background-color: #C0DFA1;
+}
+
+.newsletter-button :hover {
+    background-color: #9FC490;
+}
