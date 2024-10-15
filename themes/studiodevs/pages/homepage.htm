@@ -3,26 +3,9 @@ layout = "default"
 title = "StudioDEVS - aplikacje i striny internetowe"
 ==
 <section id="header" class="section-bg">
-<div date-bs-theme="dark">
-    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
+    {% partial 'header' %}
+</section>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    ...
-  </div>
-</div>
-</div>
+<section class="footer mt-auto">
+    {% partial 'footer' %}
 </section>
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <img src="{{ 'assets/images/stdevs_background.jpg'| theme  }}" class="object-fill-fit" alt="maintenance-image">
-            <h4>StudioDEVS</h4>
-        </div>
-    </div>
-</section>
-{% partial 'footer' %}
