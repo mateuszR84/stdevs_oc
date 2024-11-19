@@ -1,0 +1,39 @@
+url = "/dom"
+layout = "default"
+title = "Digital Media Organizer"
+==
+<div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Albums</h5>
+                        <p class="card-text">Collect your music.</p>
+                        <a href="{{ 'dom/albums'|page }}" class="btn btn-primary"
+                            ><i class="fa-solid fa-square-plus"></i> Add</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Games</h5>
+                        <p class="card-text">Collect your games</p>
+                        <a href="{{ 'dom/games'|page }}" class="btn btn-primary"><i class="fa-solid fa-square-plus"></i> Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Books</h5>
+                        <p class="card-text">Collect your books</p>
+                        <a href="{{ 'dom/books'|page }}" class="btn btn-primary"><i class="fa-solid fa-square-plus"></i> Add</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
