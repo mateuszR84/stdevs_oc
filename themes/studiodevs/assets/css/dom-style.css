@@ -1,0 +1,60 @@
+:root {
+    --primary_color: #011936;
+    --secondary-color: #9FC490;
+    --tertiary-color: #C0DFA1;
+    --text-color: #FFF;
+}
+body {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-color);
+    background-image: url('/themes/studiodevs/assets/images/dom_background.jpg');
+}
+
+.offcanvas {
+    background-color: var(--primary_color) !important;
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--primary_color) !important;
+    color: var(--secondary-color);
+    border-color: var(--primary_color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary_color);
+    border-color: var(--secondary-color);
+}
+
+.section-bg {
+    background-color: #f3f5fa;
+}
+
+.footer {
+    background-color: var(--primary_color);
+    color: var(--tertiary-color);
+}
+
+.nav-link {
+    color: var(--secondary-color) !important;
+}
+
+.link-body-emphasis {
+    color: var(--secondary-color) !important;
+}
+
+.link-body-emphasis:hover {
+    color: var(--tertiary-color) !important;
+}
+
+.newsletter-button {
+    background-color: var(--tertiary-color);
+}
+
+.newsletter-button:hover {
+    background-color: var(--secondary-color) !important;
+}
