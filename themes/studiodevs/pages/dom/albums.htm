@@ -4,5 +4,21 @@ title = "DOM - Albums"
 
 [collectionItemCreate]
 type = "album"
+
+[albumsList]
+maxItems = 3
 ==
-{% component 'collectionItemCreate' %}
+<div class="container">
+    <div class="row">
+        {% component 'collectionItemCreate' %}
+
+        <div class="row my-5">
+            <h3>Lately added albums:</h3>
+            {% component 'albumsList' %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('#itemForm').reset();
+</script>

@@ -1,16 +1,43 @@
 :root {
     --primary_color: #011936;
-    --secondary-color: #9FC490;
-    --tertiary-color: #C0DFA1;
-    --text-color: #FFF;
+    --secondary-color: #9fc490;
+    --tertiary-color: #c0dfa1;
+    --text-color: #fff;
 }
+
 body {
     font-family: "Nunito", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    background-image: url("/themes/studiodevs/assets/images/dom_background.jpg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i,
+a {
     color: var(--text-color);
-    background-image: url('/themes/studiodevs/assets/images/dom_background.jpg');
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.form-control {
+    color: var(--primary-color) !important;
 }
 
 .offcanvas {
