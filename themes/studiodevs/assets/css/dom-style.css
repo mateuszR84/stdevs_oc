@@ -21,12 +21,18 @@ h5,
 h6,
 p,
 i,
+ul,
+li,
 a {
     color: var(--text-color);
 }
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .card {
