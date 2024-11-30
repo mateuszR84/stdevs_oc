@@ -4,5 +4,17 @@ title = "DOM - Games"
 
 [collectionItemCreate]
 type = "game"
+
+[gamesList]
+maxItems = 3
 ==
-{% component 'collectionItemCreate' %}
+<div class="container">
+    <div class="row">
+        {% component 'collectionItemCreate' %}
+            
+        <div class="row my-5">
+            <h3>Lately added games:</h3>
+            {% component 'gamesList' %}
+        </div>
+    </div>
+</div>

@@ -31,8 +31,13 @@ a {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 ul {
     list-style-type: none;
+=======
+.form-label {
+    color: var(--text-color);
+>>>>>>> Stashed changes
 }
 
 .card {
