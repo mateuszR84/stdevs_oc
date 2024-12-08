@@ -1,20 +1,24 @@
 url = "/dom/games"
 layout = "dom-layout"
-title = "DOM - Games"
-
-[collectionItemCreate]
-type = "game"
+title = "Games collection"
 
 [gamesList]
-maxItems = 3
+maxItems = 12
+enableFiltering = 1
+mode = "pagination"
+==
+<?php
+function onEnd()
+{
+    if (isset($this->gameItem))
+    $this->page->title = $this->gameItem->title;
+}
+?>
 ==
 <div class="container">
-    <div class="row">
-        {% component 'collectionItemCreate' %}
-            
-        <div class="row my-5">
-            <h3>Lately added games:</h3>
-            {% component 'gamesList' %}
-        </div>
+    <div class="row my-1">
+    <a class="my-3" href="{{ "dom/games"|page }}"><i class="fa-solid fa-arrow-left"></i> Back to collection</a>
+    <a class="my-2" href="{{ "dom/creategame"|page }}"><i class="fa-solid fa-square-plus"></i> Add another item</a>
+        {% component 'gamesList' %}
     </div>
 </div>

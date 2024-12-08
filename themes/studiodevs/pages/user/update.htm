@@ -1,0 +1,118 @@
+url = "/update"
+layout = "user"
+title = "Dane użytkownika"
+
+[account]
+==
+<div class="container mt-5">
+    <div class="row mb-5">
+        <form method="post" data-request="onUpdateProfile" data-request-flash>
+            <input type="hidden" name="redirect" value="true" />
+                <div class="text-center pb-3">
+                    <h1 class="h2 mb-3">Update account</h1>
+                </div>
+
+                <div class="mb-5">
+                    {% if user.avatar %}
+                       <img src="{{ user.avatar.thumb(150, 150, 'crop') }}" alt="avatar" class="rounded-circle img-fluid mx-auto d-block"> 
+                    {% else %}
+                        <label for="avatar" class="form-label">Avatar</label>
+                        <input name="avatar" type="file" class="form-control" id="avatar" accept="image/*">
+                    {% endif %}
+                </div>
+
+                <div class="form-floating my-3">
+                    <input name="first_name" type="text" class="form-control" id="inputFirstName" placeholder="First name" value="{{ user.first_name }}" />
+                    <label for="inputFirstName">First name</label>
+                </div>
+
+                <div class="form-floating my-3">
+                    <input name="last_name" type="text" class="form-control" id="inputLastName" placeholder="Last name" value="{{ user.last_name }}" />
+                    <label for="inputLastName">Last name</label>
+                </div>
+
+                <div class="form-floating my-3">
+                    <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email address" value="{{ user.email }}" />
+                    <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-floating my-3">
+                    <input name="std_phone" type="text" class="form-control" id="inputPhone" placeholder="Phone" value="{{ user.std_phone }}" />
+                    <label for="inputEmail">Phone</label>
+                </div>
+
+                <div class="form-floating my-3">
+                    <input name="std_job_title" type="text" class="form-control" id="inputJobTitle" placeholder="Job title" value="{{ user.std_job_title }}" />
+                    <label for="inputEmail">Job title</label>
+                </div>
+
+                <h4>Socials:</h4>
+                <div class="row g-3 my-3">
+                    <div class="col input-group">
+                        <span class="input-group-text" id="facebook"><i class="user-icon fa-brands fa-facebook"></i></span>
+                        <input name="std_socials[facebook]" value="{{ user.std_socials.facebook }}" type="text" class="form-control" aria-describedby="facebook">
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-text" id="x-twitter"><i class="user-icon fa-brands fa-x-twitter"></i></span>
+                        {% set x = user.std_socials.x-twitter %}
+                        <input name="std_socials[x-twitter]" value="{{ x }} " type="text" class="form-control" aria-describedby="x-twitter">
+                    </div>
+                </div>
+                <div class="row g-3 my-3">
+                    <div class="col input-group">
+                        <span class="input-group-text" id="linkedin"><i class="user-icon fa-brands fa-linkedin"></i></span>
+                        <input name="std_socials[linkedin]" value="{{ user.std_socials.linkedin }}" type="text" class="form-control" aria-describedby="linkedin">
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-text" id="github"><i class="user-icon fa-brands fa-github"></i></span>
+                        <input name="std_socials[github]" value="{{ user.std_socials.github }}" type="text" class="form-control" aria-describedby="github">
+                    </div>
+                </div>
+                <div class="row g-3 my-3">
+                    <div class="col input-group">
+                        <span class="input-group-text" id="instagram"><i class="user-icon fa-brands fa-instagram"></i></span>
+                        <input name="std_socials[instagram]" value="{{ user.std_socials.instagram }}" type="text" class="form-control" aria-describedby="instagram">
+                    </div>
+                    <div class="col input-group">
+                        <span class="input-group-text" id="slack"><i class="user-icon fa-brands fa-slack"></i></span>
+                        <input name="std_socials[slack]" value="{{ user.std_socials.slack }}" type="text" class="form-control" aria-describedby="slack">
+                    </div>
+                </div>
+
+                <h4>Address:</h4>
+                <div>
+                    <select name="std_country_id" class="form-select form-select-sm mb-3" aria-label="Countries list">
+                    {% for iso2, country in user.getCountries() %}
+                        <option value="{{ iso2 }}" {% if iso2 == user.std_country_id %}selected{% endif %}>
+                            {{country }}
+                        </option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <div class="row g-3 my-3">
+                    <div class="col">
+                        <input name="std_house" value="{{ user.std_house }}" type="text" class="form-control" placeholder="House" aria-label="house">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="std_street_name" value="{{ user.std_street_name }}" class="form-control" placeholder="Street name" aria-label="street name">
+                    </div>
+                </div>
+                <div class="row g-3 my-3">
+                    <div class="col">
+                        <input name="std_town" value="{{ user.std_town }}" type="text" class="form-control" placeholder="Town" aria-label="town">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="std_county" value="{{ user.std_county }}" class="form-control" placeholder="County" aria-label="county">
+                    </div>
+                </div>
+                <div class="row g-3 my-3">
+                    <div class="col">
+                        <input name="std_postcode" value="{{ user.std_postcode }}" type="text" class="form-control" placeholder="Postcode" aria-label="postcode">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg w-100 py-2" data-attach-loading type="submit">Update</button>
+        </form>
+
+    </div>
+</div>
