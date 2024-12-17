@@ -9,14 +9,21 @@ type = "game"
 maxItems = 6
 enableFiltering = 0
 mode = "scroller"
+sortBy = "created_at"
 ==
 <div class="container">
     <div class="row">
         {% component 'collectionItemCreate' %}
             
-        <div class="row my-5">
+        <div class="row my-3">
             <h3>Lately added games:</h3>
             {% component 'gamesList' %}
+        </div>
+
+        <div class="text-center mb-3">
+            <button type="button" class="btn btn-primary-reverse">
+                <a href="{{ 'dom/games'|page }}">Browse collection</a>
+            </button>
         </div>
     </div>
 </div>

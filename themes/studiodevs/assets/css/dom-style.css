@@ -17,6 +17,16 @@ body {
     background-attachment: fixed;
 }
 
+.filter-icon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.client-logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
 .scroller {
     overflow-x: scroll;
 }
@@ -42,7 +52,7 @@ body {
     background-size: contain;
 }
 
-h1, h2, h3, h4, h5, h6, p, i, a, .filters {
+h1, h2, h3, h4, h5, h6, p, a, .filters {
     color: var(--text-color);
 }
 
@@ -89,6 +99,9 @@ ul {
 .western {
     background-color: #709576;
 }
+.card-game {
+    background-color: #134d1d;
+}
 
 .rating {
     display: flex;
@@ -111,8 +124,17 @@ ul {
     border: 2px solid #f1e0a2;
 }
 
+.finished {
+    color:#011936;
+}
+
+.form-switch {
+    color: var(--secondary-color) !important;
+    fill: #011936 !important;
+}
+
 .card-img-top {
-    max-height: 223.875px;
+    height: 223.875px;
 }
 
 .navbar {
@@ -167,10 +189,22 @@ ul {
     border-color: var(--primary_color);
 }
 
+.btn-primary-reverse {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+
 .btn-primary:hover {
     background-color: var(--secondary-color) !important;
     color: var(--primary_color);
     border-color: var(--secondary-color);
+}
+
+.btn-primary-reverse:hover {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+    border-color: var(--tertiary-color);
 }
 
 .section-bg {
