@@ -103,6 +103,10 @@ ul {
     background-color: #134d1d;
 }
 
+.searchbox {
+    width: 734px;
+}
+
 .rating {
     display: flex;
     width: 4ch; /* Set this to slightly wider than the longest string */
