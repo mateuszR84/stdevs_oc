@@ -34,6 +34,13 @@ redirect = "login"
     <link href="{{'assets/css/dom-style.css' | theme }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3b577f4961.js" crossorigin="anonymous"></script>
 
+    {# Algolia #}
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.24.0/dist/algoliasearch-lite.umd.js" integrity="sha256-b2n6oSgG4C1stMT/yc/ChGszs9EY/Mhs6oltEjQbFCQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.75.6/dist/instantsearch.production.min.js" integrity="sha256-DuvNCzkn3zdi0M6ISr57tX37YCcb7ezs9WK3lqUEe3Q=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.5.1/themes/reset-min.css" integrity="sha256-KvFgFCzgqSErAPu6y9gz/AhZAvzK48VJASu3DpNLCEQ=" crossorigin="anonymous">
+
+
+
     {% styles %}
 
 </head>
@@ -44,6 +51,8 @@ redirect = "login"
 <section class="footer mt-auto">
     {% partial 'footer' %}
 </section>
+    <script src="{{ "assets/js/algolia.js"|theme }}"></script>
+
 </body>
 
 </html>

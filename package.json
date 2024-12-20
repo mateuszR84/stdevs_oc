@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.7",
+        "algoliasearch": "^5.17.1",
         "bluebird": "^3.7.2",
         "bootstrap": "^5.3.0",
         "bootstrap-icons": "^1.10",
@@ -28,6 +29,7 @@
         "chartjs-adapter-moment": "^1.0.1",
         "dropzone": "^6.0.0-beta.2",
         "emmet-monaco-es": "^5.3",
+        "instantsearch.js": "^4.75.6",
         "jquery": "^3.6.0",
         "js-cookie": "^3.0.1",
         "monaco-editor": "^0.46.0",
