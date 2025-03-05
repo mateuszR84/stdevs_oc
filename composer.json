@@ -11,7 +11,8 @@
         "october/all": "^3.6",
         "stdevs/dom-plugin": "dev-master",
         "rainlab/user-plugin": "^3.1",
-        "stdevs/websitesmanager-plugin": "^1.0"
+        "stdevs/websitesmanager-plugin": "^1.0",
+        "rainlab/notify-plugin": "^1.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5|^9.0"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "043d6981654a013d04c4d10ecbaa4e43",
+    "content-hash": "7b0f7dad5f7474294272f15601407ef0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4948,6 +4948,48 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.7"
             },
             "time": "2024-12-10T01:58:33+00:00"
+        },
+        {
+            "name": "rainlab/notify-plugin",
+            "version": "v1.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://gateway.octobercms.com/composer/dist/rainlab/notify-plugin/rainlab-notify-plugin-e1b8d338101f62579bbc1fc6bca9c08eaccc6c39-zip-17dd9b.zip",
+                "reference": "e1b8d338101f62579bbc1fc6bca9c08eaccc6c39",
+                "shasum": "8e9dbf9c6881d7f69a83eaf587bee21ba20b6316"
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.5.9"
+            },
+            "type": "october-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Bobkov",
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Co-founder"
+                },
+                {
+                    "name": "Samuel Georges",
+                    "email": "daftspunky@gmail.com",
+                    "role": "Co-founder"
+                }
+            ],
+            "description": "Notify plugin for October CMS",
+            "homepage": "https://octobercms.com/plugin/rainlab-pages",
+            "keywords": [
+                "october",
+                "octobercms",
+                "pages"
+            ],
+            "support": {
+                "source": "https://github.com/rainlab/notify-plugin/tree/v1.2.1",
+                "issues": "https://github.com/rainlab/notify-plugin/issues"
+            },
+            "time": "2022-05-13T01:45:09+00:00"
         },
         {
             "name": "rainlab/user-plugin",
