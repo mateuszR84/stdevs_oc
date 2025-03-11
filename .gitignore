@@ -12,6 +12,7 @@
 /*
 !themes/
 !plugins/
+!.github/
 !README.md
 
 # Ignore everything in the "themes" directory
@@ -60,7 +61,6 @@ node_modules/
 # ----------------------------------------------------------
 
 # Misc
-!.github/workflows/stage_deploy.yml
 !.gitignore
 !.editorconfig
 !composer.json
