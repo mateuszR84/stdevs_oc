@@ -21,4 +21,4 @@ jobs:
                   username: ${{ secrets.USERNAME }}
                   port: ${{ secrets.PORT }}
                   key: ${{ secrets.SSHKEY }}
-                  script: "cd /home/${{ secrets.USERNAME }}/websites/teststudiodevs && ~/bin/deploy.sh"
+                  script: "cd /home/${{ secrets.USERNAME }}/ && ~/myscripts/deploy.sh"
