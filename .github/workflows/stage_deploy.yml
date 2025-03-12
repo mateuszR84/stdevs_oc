@@ -21,4 +21,6 @@ jobs:
                   username: ${{ secrets.USERNAME }}
                   port: ${{ secrets.PORT }}
                   password: ${{ secrets.PASSWORD }}
-                  script: "cd /home/${{ secrets.USERNAME }}/ && ~/webapps/studiodevs/current/public/deploy.sh"
+                  script: |
+                    cd /home/${{ secrets.USERNAME }}/webapps/studiodevs/current/public
+                    deploy.sh
