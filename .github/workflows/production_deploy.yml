@@ -1,11 +1,11 @@
-name: Deploy to stage
+name: Deploy to production
 
 # Trigger the workflow on push and
 # pull request events on the production branch
 on:
     push:
         branches:
-            - develop
+            - master
 
 # Authenticate to the the server via ssh
 # and run our deployment script
