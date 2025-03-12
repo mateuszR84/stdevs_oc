@@ -24,4 +24,4 @@ jobs:
                   script: |
                     cd /home/${{ secrets.USERNAME }}/webapps/studiodevs/current/public
                     pwd
-                    deploy.sh
+                    ~/deploy.sh
