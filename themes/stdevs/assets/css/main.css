@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #060606;
+  --background-color: #60adad;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -68,13 +68,17 @@ body {
 
 a {
   color: var(--accent-color);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: 0.3s;
 }
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
+}
+
+.stretched-link {
+    color: var(--heading-color) !important; 
 }
 
 h1,
@@ -835,7 +839,7 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 56px;
+  font-size: 38px;
   font-weight: 700;
   font-family: var(--nav-font);
 }
@@ -1715,4 +1719,15 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Custom 
+--------------------------------------------------------------*/
+.studio {
+    color: #60adad !important;
+}
+
+.devs {
+    color: #ffc451;
 }
