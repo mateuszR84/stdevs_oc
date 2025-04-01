@@ -1,0 +1,35 @@
+url = "/portfolio"
+layout = "default"
+title = "StudioDEVS - portfolio"
+==
+{% block content %}
+<section class="portfolio section py-5">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <div class="col">
+                <h2 class="fw-bold">Nasze realizacje</h2>
+                <p class="text-muted">Zobacz projekty, które stworzyliśmy</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for project in projects %}
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0">
+                        <img src="{{ project.image|media }}" class="card-img-top" alt="{{ project.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text text-muted">{{ project.description|length > 100 ? project.description|slice(0, 100) ~ '...' : project.description }}</p>
+                            <a href="{{ project.url }}" class="btn btn-primary">Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 text-center">
+                    <p class="text-muted">Brak realizacji do wyświetlenia.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
