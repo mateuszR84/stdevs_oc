@@ -1,0 +1,8 @@
+{
+    "name": "stdevs/stdevs-theme",
+    "type": "october-theme",
+    "description": "StDevs",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
