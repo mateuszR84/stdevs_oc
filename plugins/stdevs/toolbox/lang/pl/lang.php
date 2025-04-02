@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'navigation' => [
+        'toolbox' => 'Narzędzia',
+        'projects' => 'Projekty',
+    ],
     'models' => [
         'project' => [
             'status_draft' => 'Szkic',

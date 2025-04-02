@@ -44,10 +44,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Stdevs\Toolbox\Components\MyComponent' => 'myComponent',
+            'Stdevs\Toolbox\Components\ProjectsList' => 'projectsList',
+            'Stdevs\Toolbox\Components\ProjectDetails' => 'projectDetails',
         ];
     }
 

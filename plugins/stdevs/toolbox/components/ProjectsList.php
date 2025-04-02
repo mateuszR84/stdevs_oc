@@ -1,6 +1,7 @@
 <?php namespace Stdevs\Toolbox\Components;
 
 use Cms\Classes\ComponentBase;
+use Stdevs\Toolbox\Models\Project;
 
 /**
  * ProjectsList Component
@@ -9,11 +10,13 @@ use Cms\Classes\ComponentBase;
  */
 class ProjectsList extends ComponentBase
 {
+    public $projects;
+
     public function componentDetails()
     {
         return [
-            'name' => 'Projects List Component',
-            'description' => 'No description provided yet...'
+            'name' => 'Projects List',
+            'description' => 'Display projects'
         ];
     }
 
@@ -23,5 +26,10 @@ class ProjectsList extends ComponentBase
     public function defineProperties()
     {
         return [];
+    }
+
+    public function onRun()
+    {
+        $this->projects = Project::get();    
     }
 }

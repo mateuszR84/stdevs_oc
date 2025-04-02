@@ -3,6 +3,15 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    title:
+        label: stdevs.toolbox::lang.models.project.title
+    url:
+        label: stdevs.toolbox::lang.models.project.url
+        type: linkage
+        attributes:
+            target: _blank
+    slug:
+        label: stdevs.toolbox::lang.models.project.slug
+    completed_at:
+        label: stdevs.toolbox::lang.models.project.completed_at
+

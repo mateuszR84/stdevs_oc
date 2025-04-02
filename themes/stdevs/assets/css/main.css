@@ -278,6 +278,7 @@ h6 {
 @media (min-width: 1200px) {
     .navmenu {
         padding: 0;
+        border-bottom: 2px solid var(--primary-color);
     }
 
     .navmenu ul {
@@ -1865,4 +1866,47 @@ section,
 
 #map {
     height: 380px;
+}
+.project-card {
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    box-shadow: 0px 4px 15px rgba(255, 196, 81, 0.4);
+    transform: translateY(-5px);
+}
+
+.portfolio-bg {
+    position: relative;
+    background-image: url('../img/protfolio-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+}
+
+.portfolio-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.portfolio-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio .container {
+    margin-top: 80px; /* Możesz dostosować wartość */
+}
+
+.card-body {
+    background-color: var(--accent-color);
 }
