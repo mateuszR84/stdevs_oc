@@ -1,0 +1,21 @@
+{% set projects = __SELF__.projects %}
+<div class="row g-4">
+    {% for project in projects %}
+    <div class="col-md-4">
+        <div class="card project-card">
+            <img src="{{ project.preview_image|media }}" class="card-img-top" alt="{{ project.title }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text text-muted">{{ project.description|length > 100 ? project.description|slice(0, 100)
+                    ~ '...' : project.description }}</p>
+                <a href="{{ 'portfolio-details'|page({'slug': project.slug}) }}"
+                   class="btn btn-devs-reverse">Zobacz więcej</a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12 text-center">
+        <p class="text-muted">Brak realizacji do wyświetlenia.</p>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,66 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    status:
+        label: stdevs.toolbox::lang.models.project.status
+        type: balloon-selector
+        span: left
+        default: published
+
+    client:
+        label: stdevs.toolbox::lang.models.project.client
+        span: left
+        type: text
+
+    url:
+        label: stdevs.toolbox::lang.models.project.url
+        span: right
+        type: partial
+        path: $/stdevs/toolbox/controllers/projects/_url_input.htm
+
+    title:
+        label: stdevs.toolbox::lang.models.project.title
+        span: left
+        type: text
+
+    slug:
+        label: stdevs.toolbox::lang.models.project.slug
+        span: right
+        type: text
+        preset: title
+
+    description:
+        label: stdevs.toolbox::lang.models.project.description
+        span: full
+        type: textarea
+
+    content:
+        label: stdevs.toolbox::lang.models.project.content
+        span: full
+        type: richeditor
+
+    preview_image:
+        label: stdevs.toolbox::lang.models.project.preview_image
+        type: fileupload
+        mode: image
+        span: left
+
+    screenshots:
+        label: stdevs.toolbox::lang.models.project.screenshots
+        type: fileupload
+        mode: image
+        maxItems: 10
+        span: right
+
+    technologies:
+        label: stdevs.toolbox::lang.models.project.technologies
+        type: taglist
+        span: auto
+
+    completed_at:
+        label: stdevs.toolbox::lang.models.project.completed_at
+        span: auto
+        type: datepicker
+        mode: date

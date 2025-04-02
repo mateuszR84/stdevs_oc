@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/stdevs/toolbox/models/project/fields.yaml
+
+# Model Class name
+modelClass: Stdevs\Toolbox\Models\Project
+
+# Default redirect location
+defaultRedirect: stdevs/toolbox/projects
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: stdevs/toolbox/projects/update/:id
+    redirectClose: stdevs/toolbox/projects
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: stdevs/toolbox/projects
+    redirectClose: stdevs/toolbox/projects
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
