@@ -12,16 +12,19 @@
 <section class="container my-5">
     <div class="row">
         <div class="col-lg-8">
-            <h2>O projekcie</h2>
+            <h2 class="text-center">Case study</h2>
             <p>{{ project.content|raw }}</p>
         </div>
         <div class="col-lg-4">
-            <h4>Technologie:</h4>
+            <h4 class="text-center">Technologie:</h4>
             <div class="row g-3">
+                {% set mainTech = project.getTechLogo(project.main_tech) %}
+                {% set mainTechPath = 'assets/img/logos/' ~ mainTech %}
+                <img src="{{ mainTechPath|theme }}" alt="{{ main_tech }}" class="tech-logo my-4" title="{{ main_tech }}">
                 {% for tech in project.technologies %}
                     {% set logo = project.getTechLogo(tech) %}
                     {% set logoPath = 'assets/img/logos/' ~ logo %}
-                    <div class="col-12 d-flex justify-content-center align-items-center mb-3">
+                    <div class="col-4 d-flex justify-content-center align-items-center mb-3">
                         <img src="{{ logoPath|theme }}" alt="{{ tech }}" class="tech-logo" title="{{ tech }}">
                     </div>
                 {% endfor %}

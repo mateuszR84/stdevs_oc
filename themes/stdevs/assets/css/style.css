@@ -61,6 +61,7 @@
 .dark-background {
     --background-color: #60adad;
     --default-color: #ffffff;
+    --dark-color: #444444;
     --heading-color: #ffffff;
     --surface-color: #252525;
     --contrast-color: #2a2727;
@@ -513,7 +514,7 @@ h6 {
 .footer {
     color: var(--default-color);
     background-color: var(--background-color);
-    background: url('../img/cta-bg.jpg') no-repeat center center;
+    background: url('../img/protfolio-bg.jpg') no-repeat center center;
     background-size: cover;
     font-size: 14px;
     position: relative;
@@ -526,7 +527,8 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(96, 173, 173, 0.9);
+    /* background: rgba(96, 173, 173, 0.9); */
+    background: rgba(68, 68, 68, 0.9);
     z-index: 1;
     pointer-events: none;
 }
@@ -914,7 +916,8 @@ section,
 
 .hero:before {
     content: "";
-    background: color-mix(in srgb, var(--background-color), transparent 30%);
+    /* hero section overlay */
+    background: color-mix(in srgb, var(--dark-color), transparent 35%);
     position: absolute;
     inset: 0;
     z-index: 2;
@@ -939,7 +942,7 @@ section,
 .hero p {
     margin: 10px 0 0 0;
     font-size: 24px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    color: color-mix(in srgb, var(--default-color), transparent 5%);
 }
 
 .hero .icon-box {
@@ -1880,7 +1883,6 @@ section,
 
 .portfolio-bg {
     position: relative;
-    background-image: url('../img/protfolio-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1904,14 +1906,14 @@ section,
 }
 
 .portfolio .container {
-    margin-top: 80px; /* Możesz dostosować wartość */
+    margin-top: 80px;
 }
 
 .tech-logo {
-    max-height: 50px; /* Maksymalna wysokość */
-    width: auto;      /* Pozwala zachować proporcje */
-    height: auto;     /* Pozwala zachować proporcje */
-    object-fit: contain; /* Zapewnia, że całe logo jest widoczne */
+    max-height: 50px; 
+    width: auto;     
+    height: auto;
+    object-fit: contain;
 }
 .project-hero {
     position: relative;

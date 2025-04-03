@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->json('technologies')->nullable();
             $table->string('main_color')->nullable();
+            $table->string('main_tech')->nullable();
             $table->string('client')->nullable();
             $table->string('status')->nullable();
             $table->date('completed_at')->nullable();

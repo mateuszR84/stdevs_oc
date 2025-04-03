@@ -56,13 +56,22 @@ class Project extends Model
     public function getTechLogo($techName)
     {
         $logos = [
-            'October CMS' => 'oc.svg',
+            'october' => 'oc.svg',
+            'laravel' => 'laravel.svg',
             'Bootstrap5' => 'bootstrap.svg',
             'CSS' => 'css.svg',
             'HTML' => 'html.svg',
-            'Vue' => 'vue.svg'
+            'Vue' => 'vue.svg',
+            'JS' => 'js.svg',
         ];
 
         return $logos[$techName] ?? '';
+    }
+
+    public function getMainTechOptions(): array {
+        return [
+            'october' => 'October CMS',
+            'laravel' => 'Laravel',
+        ];
     }
 }
