@@ -55,6 +55,11 @@ fields:
         maxItems: 10
         span: right
 
+    main_tech:
+        label: stdevs.toolbox::lang.models.project.main_tech
+        type: dropdown
+        span: left
+
     technologies:
         label: stdevs.toolbox::lang.models.project.technologies
         type: taglist
