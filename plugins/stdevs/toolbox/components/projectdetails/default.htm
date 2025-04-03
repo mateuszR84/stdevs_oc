@@ -1,11 +1,12 @@
 {% set project = __SELF__.project %}
 
 <section class="project-hero" style="background: url('{{ project.preview_image|media }}') center/cover;">
-    <div class="container text-center text-white py-5">
-        <h1 class="display-4">{{ project.title }}</h1>
-        <p class="lead">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="btn btn-devs-reverse mt-3">Zobacz online</a>
-    </div>
+    <div class="overlay" style="background-color: {{ project.main_color }};"></div>
+        <div class="container text-center text-white py-5">
+            <h1 class="display-4">{{ project.title }}</h1>
+            <p class="lead">{{ project.description }}</p>
+            <a href="{{ project.url }}" class="btn btn-devs-reverse mt-3" target="_blank">Zobacz online</a>
+        </div>
 </section>
 
 <section class="container my-5">
@@ -16,20 +17,26 @@
         </div>
         <div class="col-lg-4">
             <h4>Technologie:</h4>
-            <ul class="list-group">
+            <div class="row g-3">
                 {% for tech in project.technologies %}
-                    <li class="list-group-item">{{ tech }}</li>
+                    {% set logo = project.getTechLogo(tech) %}
+                    {% set logoPath = 'assets/img/logos/' ~ logo %}
+                    <div class="col-12 d-flex justify-content-center align-items-center mb-3">
+                        <img src="{{ logoPath|theme }}" alt="{{ tech }}" class="tech-logo" title="{{ tech }}">
+                    </div>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     </div>
 </section>
+
+
 
 <section class="project-gallery py-5 bg-light">
     <div class="container">
         <h2 class="text-center">Galeria</h2>
         <div class="row">
-            {% for image in project.images %}
+            {% for image in project.screenshots %}
                 <div class="col-md-4">
                     <img src="{{ image|media }}" class="img-fluid rounded shadow-sm" alt="{{ project.title }}">
                 </div>
@@ -45,12 +52,4 @@
             <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> {{ feature }}</li>
         {% endfor %}
     </ul>
-</section>
-
-<section class="cta bg-primary text-white text-center py-5">
-    <div class="container">
-        <h2>Masz pomysł na projekt?</h2>
-        <p>Skontaktuj się z nami, aby stworzyć coś wyjątkowego.</p>
-        <a href="{{ 'contact'|page }}" class="btn btn-light">Skontaktuj się</a>
-    </div>
 </section>

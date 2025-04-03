@@ -52,4 +52,17 @@ class Project extends Model
             $this->url = 'https://' . $this->url;
         }
     }
+
+    public function getTechLogo($techName)
+    {
+        $logos = [
+            'October CMS' => 'oc.svg',
+            'Bootstrap5' => 'bootstrap.svg',
+            'CSS' => 'css.svg',
+            'HTML' => 'html.svg',
+            'Vue' => 'vue.svg'
+        ];
+
+        return $logos[$techName] ?? '';
+    }
 }

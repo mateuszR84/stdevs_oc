@@ -9,17 +9,6 @@ fields:
         span: left
         default: published
 
-    client:
-        label: stdevs.toolbox::lang.models.project.client
-        span: left
-        type: text
-
-    url:
-        label: stdevs.toolbox::lang.models.project.url
-        span: right
-        type: partial
-        path: $/stdevs/toolbox/controllers/projects/_url_input.htm
-
     title:
         label: stdevs.toolbox::lang.models.project.title
         span: left
@@ -30,6 +19,18 @@ fields:
         span: right
         type: text
         preset: title
+
+    url:
+        label: stdevs.toolbox::lang.models.project.url
+        span: right
+        type: partial
+        path: $/stdevs/toolbox/controllers/projects/_url_input.htm
+    
+    main_color:
+        label: stdevs.toolbox::lang.models.project.main_color
+        span: left
+        type: colorpicker
+        showInput: true
 
     description:
         label: stdevs.toolbox::lang.models.project.description
@@ -64,3 +65,8 @@ fields:
         span: auto
         type: datepicker
         mode: date
+
+    client:
+        label: stdevs.toolbox::lang.models.project.client
+        span: left
+        type: text

@@ -21,6 +21,7 @@ return [
             'technologies' => 'Użyte technologie',
             'client' => 'Dane klienta',
             'completed_at' => 'Data ukończenia',
+            'main_color' => 'Kolor wiodący',
         ]
     ]
 ];
