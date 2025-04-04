@@ -16,16 +16,14 @@ title = "StudioDEVS - aplikacje i strony internetowe"
     {% partial 'home/contact' %}
 </main>
 
-<!-- Scroll Top -->
 <a href="#"
    id="scroll-top"
    class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Preloader -->
 <div id="preloader"></div>
 
 <script>
-    var map = L.map('map').setView([50.645401, 21.068991], 9);
+    var map = L.map('map', { scrollWheelZoom: false }).setView([50.645401, 21.068991], 9);
     var marker = L.marker([50.645401, 21.068991]).addTo(map);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
