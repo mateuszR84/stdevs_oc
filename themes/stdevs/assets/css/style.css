@@ -223,22 +223,44 @@ h6 {
     font-size: 32px;
 }
 
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
+.header .btn-getstarted {
+    display: inline-flex;
+    align-items: center;
     color: var(--contrast-color);
-    font-size: 14px;
-    padding: 8px 30px;
-    margin: 0 0 0 30px;
+    font-size: 24px;
+    padding: 8px 16px;
+    margin-left: 30px;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: all 0.4s ease;
     border: 2px solid var(--accent-color);
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 60px; /* tylko ikona */
 }
 
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-    color: var(--default-color);
-    background: var(--accent-color);
+.header .btn-getstarted .btn-text {
+    margin-left: 10px;
+    opacity: 0;
+    max-width: 0;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 16px;
+    white-space: nowrap;
 }
+
+/* Efekt po hoverze */
+.header .btn-getstarted:hover {
+    background: var(--primary-color);
+    color: var(--surface-color);
+    max-width: 200px;
+}
+
+.header .btn-getstarted:hover .btn-text {
+    opacity: 1;
+    max-width: 100px; /* ustalony limit dla płynności */
+}
+
 
 @media (max-width: 1200px) {
     .header .logo {
@@ -1932,5 +1954,3 @@ section,
     position: relative;
     z-index: 2;
 }
-
-

@@ -9,7 +9,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li>
-                    <a href="#hero" class="active">Home<br /></a>
+                    <a href="{{ 'home'|page }}" class="active">Główna<br /></a>
                 </li>
                 <li><a href="#about">O nas</a></li>
                 <li><a href="#services">Usługi</a></li>
@@ -41,8 +41,9 @@
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        {% if this.page.url != '/login' %}
-            <a class="btn-getstarted" href="{{ 'login'|page }}">Rejestracja / logowanie</a>
-        {% endif %}
+        <a class="btn-getstarted" href="{{ 'login'|page }}">
+            <i class="bi bi-person-circle"></i>
+            <span class="btn-text">Logowanie</span>
+        </a>
     </div>
 </header>
