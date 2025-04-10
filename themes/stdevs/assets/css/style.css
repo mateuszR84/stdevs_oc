@@ -868,6 +868,15 @@ section,
     overflow: clip;
 }
 
+.section-no-padding {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding-bottom: 0px;
+    padding-top: 50px;
+    scroll-margin-top: 80px;
+    overflow: clip;
+}
+
 @media (max-width: 1199px) {
     section,
     .section {
@@ -1890,7 +1899,9 @@ section,
 }
 
 #map {
-    height: 380px;
+    height: 500px;
+    max-height: 480px;
+    width: 100%;
 }
 .project-card {
     border: 1px solid var(--primary-color) !important;

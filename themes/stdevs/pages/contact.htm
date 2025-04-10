@@ -1,0 +1,32 @@
+url = "/contact"
+layout = "default"
+title = "StudioDEVS - Kontakt"
+==
+<main class="main">
+    {% partial 'home/contact' %}
+</main>
+
+<script>
+    var map = L.map('map', { scrollWheelZoom: false }).setView([50.645401, 21.068991], 9);
+    var marker = L.marker([50.645401, 21.068991]).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    var customLeafletFilter = [
+        // 'blur:0px',
+        'brightness:79%',
+        'contrast:159%',
+        'grayscale:100%',
+        'hue:180deg',
+        // 'opacity:100%',
+        // 'invert:100%',
+        // 'saturate:300%',
+        'sepia:24%',
+    ];
+    L.tileLayer.colorFilter('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        filter: customLeafletFilter,
+    }).addTo(map);
+
+</script>
+
+<script src="{{ 'assets/js/customMarker.js'|theme }}"></script>
