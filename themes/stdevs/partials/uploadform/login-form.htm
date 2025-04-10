@@ -1,0 +1,35 @@
+<div class="d-flex align-items-center mb-3 pb-1">
+    <h4 class="sitename"><span class="studio">Studio</span><span class="devs">DEVS</span></h4>
+</div>
+
+<h5 class="fw-normal mb-3 pb-3">Masz pytanie lub pomysł? Napisz do nas!</h5>
+
+<form method="POST" action="/kontakt" class="php-email-form">
+
+    <div class="form-floating mb-4">
+        <input type="text" name="name" id="contact-name" class="form-control form-control-lg" placeholder="Imię i nazwisko" required />
+        <label for="contact-name">Imię i nazwisko</label>
+    </div>
+
+    <div class="form-floating mb-4">
+        <input type="email" name="email" id="contact-email" class="form-control form-control-lg" placeholder="Email" required />
+        <label for="contact-email">Email</label>
+    </div>
+
+    <div class="form-floating mb-4">
+        <textarea name="message" id="contact-message" class="form-control form-control-lg" placeholder="Twoja wiadomość" style="height: 150px" required></textarea>
+        <label for="contact-message">Wiadomość</label>
+    </div>
+
+    <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" value="" id="privacy-check" required>
+        <label class="form-check-label" for="privacy-check">
+            Akceptuję <a href="/polityka-prywatnosci" class="login-link">politykę prywatności</a>
+        </label>
+    </div>
+
+    <div class="pt-1 mb-4 text-center">
+        <button class="btn btn-dark btn-lg btn-devs-reverse" type="submit">Wyślij wiadomość</button>
+    </div>
+
+</form>

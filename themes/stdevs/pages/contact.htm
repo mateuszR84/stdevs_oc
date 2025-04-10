@@ -1,10 +1,31 @@
 url = "/contact"
 layout = "default"
 title = "StudioDEVS - Kontakt"
+
+[uploadForm]
+group = "Contact form"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+feedback_mode = "flash"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+uploader_label = "Drag & Drop your files or Browse"
+maxFiles = 1
+maxFileSize = "2MB"
+maxTotalSize = "5MB"
+fileTypes[application/pdf] = "pdf"
+fileTypes[application/zip] = "zip"
+fileTypes[image/png] = "png"
+fileTypes[image/jpeg] = "jpg"
 ==
-<main class="main">
+<section id="contact" class="contact">
+    {% component 'uploadForm' %}
     {% partial 'home/contact' %}
-</main>
+</section>
 
 <script>
     var map = L.map('map', { scrollWheelZoom: false }).setView([50.645401, 21.068991], 9);
