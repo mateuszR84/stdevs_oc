@@ -22,10 +22,14 @@ fileTypes[application/zip] = "zip"
 fileTypes[image/png] = "png"
 fileTypes[image/jpeg] = "jpg"
 ==
-<section id="contact" class="contact">
+<section id="contact" class="contact subpage">
+    <div class="container section-title mt-5 pt-5" data-aos="fade-up">
+        <h2>Kontakt</h2>
+        <p>Zapraszamy do nas</p>
+    </div>
     {% component 'uploadForm' %}
-    {% partial 'home/contact' %}
 </section>
+    {% partial 'home/map' %}
 
 <script>
     var map = L.map('map', { scrollWheelZoom: false }).setView([50.645401, 21.068991], 9);
@@ -33,7 +37,7 @@ fileTypes[image/jpeg] = "jpg"
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    var customLeafletFilter = [
+    var customColouringFilter = [
         // 'blur:0px',
         'brightness:79%',
         'contrast:159%',
@@ -45,7 +49,7 @@ fileTypes[image/jpeg] = "jpg"
         'sepia:24%',
     ];
     L.tileLayer.colorFilter('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        filter: customLeafletFilter,
+        filter: customColouringFilter,
     }).addTo(map);
 
 </script>

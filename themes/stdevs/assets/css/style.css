@@ -1965,3 +1965,24 @@ section,
     position: relative;
     z-index: 2;
 }
+
+.subpage {
+    background-color: var(--button-primary-border-hover-color);
+    background: url('../img/subpage-bg.jpg') no-repeat center center;
+    background-size: cover;
+    font-size: 14px;
+    position: relative;
+    height: 33vh;
+}
+
+.subpage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(96, 173, 173, 0.9);
+    z-index: 1;
+    pointer-events: none;
+}
