@@ -1,7 +1,10 @@
-<?php namespace Stdevs\Toolbox;
+<?php
+
+namespace Stdevs\Toolbox;
 
 use Backend;
 use System\Classes\PluginBase;
+use StDevs\Toolbox\Console\SendGwentReminder;
 
 /**
  * Plugin Information File
@@ -28,9 +31,21 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        //
+        $this->registerConsoleCommand('toolbox:gwent', SendGwentReminder::class);
     }
 
+    public function registerSchedule($schedule)
+    {
+        // Wysyłaj email codziennie o 8:00 rano
+        $schedule->command('toolbox:gwent')
+                 ->dailyAt('08:00')
+                 ->timezone('Europe/Warsaw'); // Ustaw swoją strefę czasową
+        // Alternatywnie możesz użyć innych opcji czasowych:
+        // ->daily() - codziennie o północy
+        // ->weekdays() - tylko w dni robocze
+        // ->mondays() - tylko w poniedziałki
+        // ->cron('0 8 * * *') - własny cron expression
+    }
     /**
      * boot method, called right before the request route.
      */
