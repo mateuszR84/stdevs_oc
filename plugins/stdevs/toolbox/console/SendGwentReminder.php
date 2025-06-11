@@ -1,6 +1,6 @@
 <?php
 
-namespace StDevs\Toolbox\Console;
+namespace Stdevs\Toolbox\Console;
 
 use Mail;
 use Carbon\Carbon;
@@ -18,10 +18,10 @@ class SendGwentReminder extends Command
             $data = [
                 'date' => Carbon::now()->format('d.m.Y'),
                 'time' => Carbon::now()->format('H:i'),
-                'content' => ''
+                'name' => 'Mateusz',
             ];
 
-            Mail::send('yourauthor.yourplugin::mail.morning-email', $data, function ($message) {
+            Mail::send('stdevs.toolbox::mail.gwent', $data, function ($message) {
                 $message->to('mateusz.rycombel84@gmail.com', 'Mateusz');
                 $message->subject('Gwent Daily Puzzle - ' . Carbon::now()->format('d.m.Y'));
             });
