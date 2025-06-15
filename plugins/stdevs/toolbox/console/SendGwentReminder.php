@@ -16,15 +16,11 @@ class SendGwentReminder extends Command
     public function handle()
     {
         try {
-            $logoPath = storage_path('app/media/gwent-logo.png');
-
             $data = [
                 'date' => Carbon::now()->format('d.m.Y'),
                 'time' => Carbon::now()->format('H:i'),
                 'name' => 'Mateusz',
                 'flavor' => (new GwentApi())->getRandomFlavor(),
-                'logoPath' => $logoPath,
-
             ];
 
             Mail::send('stdevs.toolbox::mail.gwent', $data, function ($message) {
