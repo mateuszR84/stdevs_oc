@@ -1,0 +1,17 @@
+plugin:
+    name: 'stdevs.toolbox::lang.plugin.name'
+    description: 'stdevs.toolbox::lang.plugin.description'
+    author: 'StudioDEVS'
+    icon: icon-wrench
+    homepage: ''
+navigation:
+    toolbox:
+        label: stdevs.toolbox::lang.navigation.toolbox
+        url: stdevs/toolbox/websites
+        icon: icon-wrench
+        sideMenu:
+            projects:
+                label: stdevs.toolbox::lang.navigation.projects
+                url: stdevs/toolbox/projects
+                icon: icon-vcard
+

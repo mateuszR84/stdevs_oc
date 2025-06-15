@@ -4,10 +4,8 @@
 # ------------------------------------------------------------------------------
 # By default all files are ignored.
 #
-
 # October-specific rules
 # ----------------------------------------------------------
-
 # Ignore everything in the root except the "plugins" and "themes" directories
 /*
 !themes/
@@ -20,16 +18,12 @@ themes/*
 
 # Ignore everything in the "plugins" directory, except your own namespace
 plugins/*
-!plugins/stdevs/toolbox
-!plugins/stdevs/toolbox/**
-
-# If you have a mixture of private (in repo) and public (published to market)
-# plugins, uncomment the following line to ignore all plugins in your namespace
-# because you'll want to manage public plugins via the automatic updater
+!plugins/stdevs/
+plugins/stdevs/*
+!plugins/stdevs/toolbox/
 
 # Miscellaneous rules
 # ----------------------------------------------------------
-
 # Ignore everything in the storage folders
 !storage/*
 storage/*.key
@@ -40,7 +34,7 @@ storage/framework/cache/*
 storage/framework/sessions/*
 storage/framework/views/*
 
-# Ignore node depenencies
+# Ignore node dependencies
 node_modules/
 
 # Ignore log files and databases
@@ -60,7 +54,6 @@ node_modules/
 
 # Whitelist rules
 # ----------------------------------------------------------
-
 # Misc
 !.gitignore
 !.editorconfig
