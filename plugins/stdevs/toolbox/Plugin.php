@@ -36,15 +36,9 @@ class Plugin extends PluginBase
 
     public function registerSchedule($schedule)
     {
-        // Wysyłaj email codziennie o 8:00 rano
         $schedule->command('toolbox:gwent')
                  ->dailyAt('08:00')
-                 ->timezone('Europe/Warsaw'); // Ustaw swoją strefę czasową
-        // Alternatywnie możesz użyć innych opcji czasowych:
-        // ->daily() - codziennie o północy
-        // ->weekdays() - tylko w dni robocze
-        // ->mondays() - tylko w poniedziałki
-        // ->cron('0 8 * * *') - własny cron expression
+                 ->timezone('Europe/Warsaw');
     }
     /**
      * boot method, called right before the request route.
