@@ -5580,18 +5580,18 @@
         },
         {
             "name": "stdevs/websitesmanager-plugin",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:mateuszR84/websitesmanager.git",
-                "reference": "d7a87c6996c8e3e3811b6429959dc40ec59c9fe4"
+                "reference": "3b8551fe5668a9418a579152199cc3fed8a23001"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "october-plugin",
             "description": "No description provided yet...",
-            "time": "2025-03-04T10:00:32+00:00"
+            "time": "2025-08-21T13:18:13+00:00"
         },
         {
             "name": "symfony/console",
