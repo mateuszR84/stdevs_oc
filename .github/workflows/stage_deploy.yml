@@ -57,7 +57,7 @@ jobs:
             {
               attachments: [{
                 color: 'warning',
-                text: `🚀 Deployment started\nBranch: ${process.env.GITHUB_REF_NAME}\nCommit: ${process.env.GITHUB_SHA.substring(0, 7)}\nAuthor: ${process.env.GITHUB_ACTOR}`
+                text: `Deployment started\nProject: Studiodevs(stage)\nBranch: ${process.env.GITHUB_REF_NAME}\nCommit: ${process.env.GITHUB_SHA.substring(0, 7)}\nAuthor: ${process.env.GITHUB_ACTOR}`
               }]
             }
         env:
@@ -111,6 +111,7 @@ jobs:
           status: success
           text: |
             ✅ Deployment completed successfully!
+            Project: Studiodevs (stage)
             Branch: ${{ github.ref_name }}
             Commit: ${{ github.sha }}
             Environment: staging
