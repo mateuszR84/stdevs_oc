@@ -12,6 +12,7 @@
         "stdevs/dom-plugin": "dev-master",
         "rainlab/user-plugin": "^3.1",
         "stdevs/websitesmanager-plugin": "^1.0",
+        "studiodevs/nudge-plugin": "^1.0",
         "publipresse/forms-plugin": "^2.0"
     },
     "require-dev": {
@@ -59,6 +60,10 @@
         "stdevs/websitesmanager-plugin": {
             "type": "git",
             "url": "git@github.com:mateuszR84/websitesmanager.git"
+        },
+        "studiodevs/nudge-plugin": {
+            "type": "git",
+            "url": "git@github.com:mateuszR84/nudge-plugin.git"
         },
         "octobercms": {
             "type": "composer",
