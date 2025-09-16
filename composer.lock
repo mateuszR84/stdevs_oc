@@ -5563,18 +5563,18 @@
         },
         {
             "name": "studiodevs/nudge-plugin",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:mateuszR84/nudge-plugin.git",
-                "reference": "098275a13e25a04dc71cb8814acfbbb3244b9bb8"
+                "reference": "8dab07becb14294946240b9dc300ee61eac108b2"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "october-plugin",
             "description": "No description provided yet...",
-            "time": "2025-09-11T12:54:09+00:00"
+            "time": "2025-09-16T05:41:50+00:00"
         },
         {
             "name": "symfony/console",
