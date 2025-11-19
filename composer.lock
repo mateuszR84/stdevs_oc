@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5f4310813853f8124756f1dd9379163",
+    "content-hash": "5d4c19be3f4a72c28c0e95c70fbb94ad",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -5783,22 +5783,6 @@
             "time": "2023-09-03T09:24:00+00:00"
         },
         {
-            "name": "stdevs/dom-plugin",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:mateuszR84/dom.git",
-                "reference": "2d6862b78e76f881ee418330c9408c62a77ef04e"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "default-branch": true,
-            "type": "october-plugin",
-            "description": "Digital media organizer",
-            "time": "2024-11-14T11:56:45+00:00"
-        },
-        {
             "name": "stdevs/websitesmanager-plugin",
             "version": "1.8.0",
             "source": {
@@ -10734,9 +10718,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "stdevs/dom-plugin": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
