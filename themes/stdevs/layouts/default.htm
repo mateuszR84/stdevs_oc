@@ -2,6 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% if this.environment == 'production' %}
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCN3W3FE9B"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PCN3W3FE9B');
+            </script>
+        {% endif %}
+
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <title>{{ this.page.title }}</title>
