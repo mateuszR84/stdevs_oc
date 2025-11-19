@@ -150,9 +150,11 @@ jobs:
       - name: Run basic smoke tests
         run: |
           # Sprawdź czy strona główna odpowiada
-          response=$(curl -s -o /dev/null -w "%{http_code}" "${{ env.STAGING_URL }}")
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+          -u "${{ secrets.STAGING_USERNAME }}:${{ secrets.STAGING_PASSWORD }}" \
+          "${{ env.STAGING_URL }}")
           if [ "$response" != "200" ]; then
-            echo "Main page check failed with status: $response"
-            exit 1
+          echo "Main page check failed with status: $response"
+          exit 1
           fi
           echo "Smoke tests passed!"
