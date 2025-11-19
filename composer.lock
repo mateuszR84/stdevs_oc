@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "294e3f0ae9b890b56652ac03ec44c9d7",
+    "content-hash": "c5f4310813853f8124756f1dd9379163",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -5210,34 +5210,6 @@
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.14"
             },
             "time": "2025-10-27T17:15:31+00:00"
-        },
-        {
-            "name": "publipresse/forms-plugin",
-            "version": "2.0.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://gateway.octobercms.com/composer/dist/publipresse/forms-plugin/publipresse-forms-plugin-6d1d0efbc0fd9d501a4edf7aef60965b245ccf5a-zip-386bc9.zip",
-                "reference": "6d1d0efbc0fd9d501a4edf7aef60965b245ccf5a",
-                "shasum": "0cc93f3d97b3eb327470dc6ab75d893e1a20ecae"
-            },
-            "type": "october-plugin",
-            "license": [
-                "MIT"
-            ],
-            "description": "Create easy (and almost magic) AJAX forms",
-            "homepage": "https://github.com/publipresse/oc-forms-plugin",
-            "keywords": [
-                "cms",
-                "forms",
-                "magic forms",
-                "october",
-                "plugin"
-            ],
-            "support": {
-                "source": "https://github.com/publipresse/oc-forms-plugin/tree/2.0.4",
-                "issues": "https://github.com/publipresse/oc-forms-plugin/issues"
-            },
-            "time": "2024-10-31T07:54:52+00:00"
         },
         {
             "name": "rainlab/user-plugin",
