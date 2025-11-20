@@ -1,74 +1,49 @@
-<main>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand mx-5" href="{{ "homepage"|page }}">
-                <img src="{{ 'assets/images/favicons/favicon-32x32.png'|theme }}" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item user-dropdown dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ "dom/dom"|page }}" data-bs-toggle="dropdown" aria-expanded="false">Collection</a>
-                        <ul class="dropdown-menu">
-                            <li class="d-flex align-items-center">
-                                <a href="{{ "dom/albums"|page }}"
-                                   class="dropdown-item"><i class="nav-col-item fa-solid fa-compact-disc me-2"></i>
-                                    Albums</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <a href="{{ "dom/creategame"|page }}"
-                                   class="dropdown-item"><i class="nav-col-item fa-solid fa-gamepad me-1"></i> Games</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <a href="{{ "dom/books"|page }}"
-                                   class="dropdown-item"><i class="nav-col-item fa-solid fa-book me-2"></i> Books</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <span class="navbar-text me-4">
-                    {% if user %}
-                    <li class="user-dropdown nav-item dropdown">
-                        <div class="d-flex align-items-center">
-                            <p class="pt-3 me-3 username">{{ user.fullname }}</p>
-                            <a href="#" class="nav-link dropdown-toggle" id="user" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ user.avatar.thumb(50, 50, ('crop')) }}"
-                                    alt="User Avatar">
-                            </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user">
-                            <li>
-                                <a class="dropdown-item" href="{{ "user/details"|page }}">
-                                    <i class="user-icon fa-solid fa-user-pen mx-2"></i> Edit
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <a class="dropdown-item"
-                                   data-request="onLogout"
-                                   data-request-data="{ redirect: '/' }">
-                                    <i class="user-icon fa-solid fa-arrow-right-from-bracket"></i> Logout
-                                </a>
-                            </li>
-                        </ul>
-                        </div>
-                    </li>
-                    {% else %}
-                    <a href="{{ "user/login"|page }}">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                    {% endif %}
-                </span>
-            </div>
-        </div>
-    </nav>
-</main>
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="{{ 'home'|page }}" class="logo d-flex align-items-center me-auto me-lg-0">
+            {# <img src="{{'assets/img/logo.webp'|theme}}" alt=""> #}
+            <h1 class="sitename"><span class="studio">Studio</span><span class="devs">DEVS</span></h1>
+            <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li>
+                    <a href="{{ 'home'|page }}" class="active">Główna<br /></a>
+                </li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="{{ 'portfolio'|page }}">Portfolio</a></li>
+                {# <li class="dropdown">
+                    <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="#">Dropdown 1</a></li>
+                        <li class="dropdown">
+                            <a href="#"
+                                ><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Deep Dropdown 1</a></li>
+                                <li><a href="#">Deep Dropdown 2</a></li>
+                                <li><a href="#">Deep Dropdown 3</a></li>
+                                <li><a href="#">Deep Dropdown 4</a></li>
+                                <li><a href="#">Deep Dropdown 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dropdown 2</a></li>
+                        <li><a href="#">Dropdown 3</a></li>
+                        <li><a href="#">Dropdown 4</a></li>
+                    </ul>
+                </li> #}
+                <li><a href="{{ 'contact'|page }}">Kontakt</a></li>
+                <li><a href="{{ 'blog'|page }}">Blog</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="{{ 'login'|page }}">
+            <i class="bi bi-person-circle"></i>
+            <span class="btn-text">Logowanie</span>
+        </a>
+    </div>
+</header>

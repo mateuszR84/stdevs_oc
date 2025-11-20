@@ -64,7 +64,6 @@ node_modules/
 
 # Themes
 !themes/studiodevs/
-!themes/stdevs/
 
 # Plugins
 # If all of your plugins are private and you didn't uncomment line 26,
