@@ -144,8 +144,17 @@ jobs:
 
       - name: Run health check
         run: |
-          curl -f -s "${{ secrets.HEALTH_CHECK_URL }}" || exit 1
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+          -u "${{ secrets.STAGING_USERNAME }}:${{ secrets.STAGING_PASSWORD }}" \
+          "${{ secrets.HEALTH_CHECK_URL }}")
+
+          if [ "$response" != "200" ]; then
+            echo "Health check failed with status: $response"
+            exit 1
+          fi
+
           echo "Health check passed!"
+
 
       - name: Run basic smoke tests
         run: |
