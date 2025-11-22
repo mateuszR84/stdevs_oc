@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Gidole&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@config "../../../tailwind.config.js";
+
+@theme {
+    --font-heading: "Gidole", sans-serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-body;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+}
+  

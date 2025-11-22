@@ -1,0 +1,28 @@
+{% if this.environment == 'production' %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCN3W3FE9B"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PCN3W3FE9B');
+    </script>
+{% endif %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ this.page.meta_description }}">
+<title>{{ this.page.title }}</title>
+
+<link rel="stylesheet" href="{{ ['assets/dist/css/main.css']|theme }}">
+
+{# Fontawesome #}
+<script src="https://kit.fontawesome.com/3b577f4961.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+
+{# Favicons #}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/favicons/apple-touch-icon.png'|theme }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicons/favicon-16x16.png'|theme }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicons/favicon-32x32.png'|theme }}">
+
+{% styles %}
