@@ -1,0 +1,43 @@
+<section id="contact" class="relative py-24 bg-gray-50 overflow-hidden">
+    
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0d1b2a]">Porozmawiajmy o Twoim projekcie</h2>
+        <p class="text-gray-600 text-lg mb-12 mx-auto">Skontaktuj się z nami, aby omówić Twój pomysł i dowiedzieć się, jak możemy Ci pomóc.</p>
+        
+        <form data-request="{{ __SELF__ }}::onFormSubmit" class="grid gap-6 md:grid-cols-2">
+
+            {{ form_token() }}
+            
+            <div class="relative group">
+                <input required type="text" name="name" placeholder="Imię" class="p-4 border-2 border-gray-200 rounded-2xl w-full focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50" >
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
+                <div data-validate-for="name"></div>
+            </div>
+            
+            <div class="relative group">
+                <input required type="email" name="email" placeholder="Email" class="p-4 border-2 border-gray-200 rounded-2xl w-full focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50" >
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
+            
+            <div class="relative group md:col-span-2">
+                <textarea required name="message" placeholder="Wiadomość" class="p-4 border-2 border-gray-200 rounded-2xl w-full h-40 focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50 resize-none" ></textarea>
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
+            
+
+            <div class="form-group">
+                {% partial '@recaptcha' %}
+            </div>
+
+            <button id="simpleContactSubmitButton" type="submit" class="md:col-span-2 relative overflow-hidden group bg-gradient-to-r from-[#ffc451] to-[#ffb731] text-[#0d1b2a] px-10 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                    Wyślij wiadomość
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-[#ffb731] to-[#ffc451] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+        </form>
+    </div>
+</section>

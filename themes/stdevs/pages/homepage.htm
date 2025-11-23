@@ -1,10 +1,34 @@
-title = "Strona główna"
 url = "/"
 layout = "default"
+title = "Strona główna"
 meta_title = "StudioDEVS - Strona główna"
 meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
+
+[genericForm]
+rules[name] = "required|string|min:3|max:15"
+rules[email] = "required|email"
+rules[message] = "required"
+rules_messages[email.email] = "Niepoprawny email!"
+rules_messages[email.required] = "Pole email jest wymagane."
+rules_messages[name.required] = "Pole imię jest wymagane"
+rules_messages[message.required] = "Pole wiadomość jest wymagane"
+rules_messages[name.min:3] = "Wartość w polu imię musi mieć co najmniej 3 znaki"
+rules_messages[name.max:15] = "Wartość w polu imię jest za długa"
+messages_success = "Formularz został wysłany poprawnie"
+messages_errors = "Wystąpiły błędy przy próbie wysłania formularza"
+mail_enabled = 1
+mail_subject = "StudioDEVS - nowa wiadomość"
+mail_recipients[kontakt@studiodevs.pl] = "kontakt@studiodevs.pl"
+reset_form = 1
+redirect = "/"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
-<!-- HERO SECTION -->
 <section class="relative min-h-screen w-full bg-[#0d1b2a] text-white flex items-center">
 
     <div class="absolute top-10 left-10 w-24 h-24 bg-[#60adad] rounded-full opacity-20 blur-2xl"></div>
@@ -12,7 +36,6 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 py-32">
 
-        <!-- LEFT CONTENT -->
         <div>
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-8">
                 Tworzymy nowoczesne<br>
@@ -38,7 +61,6 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
             </div>
         </div>
 
-        <!-- RIGHT SIDE — IMAGE WITH BACKGROUND BLOBS -->
         <div class="relative flex justify-center hidden md:flex">
             <!-- Blobs behind image -->
             <div class="absolute -top-10 -left-10 w-72 h-72 bg-[#60adad] rounded-[40%] blur-2xl opacity-30"></div>
@@ -55,7 +77,6 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
 </section>
 
 
-<!-- SERVICES -->
 <section id="services" class="relative py-24 bg-white overflow-hidden">
     
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
@@ -65,9 +86,7 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
         </p>
         
         <div class="grid md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
             <div class="group relative p-8 bg-gradient-to-br from-white to-gray-50 border-2 border-gray-100 rounded-3xl hover:border-[#60adad] transition-all duration-300 hover:shadow-xl">
-                <!-- Icon circle -->
                 <div class="w-16 h-16 bg-gradient-to-br from-[#60adad] to-[#4b8e8e] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -77,9 +96,7 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
                 <p class="text-gray-600 leading-relaxed">Budujemy systemy i aplikacje szyte na miarę.</p>
             </div>
             
-            <!-- Card 2 -->
             <div class="group relative p-8 bg-gradient-to-br from-white to-gray-50 border-2 border-gray-100 rounded-3xl hover:border-[#ffc451] transition-all duration-300 hover:shadow-xl">
-                <!-- Icon circle -->
                 <div class="w-16 h-16 bg-gradient-to-br from-[#ffc451] to-[#ffb731] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-[#0d1b2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
@@ -89,9 +106,7 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
                 <p class="text-gray-600 leading-relaxed">Nowoczesne i szybkie strony oparte na October CMS.</p>
             </div>
             
-            <!-- Card 3 -->
             <div class="group relative p-8 bg-gradient-to-br from-white to-gray-50 border-2 border-gray-100 rounded-3xl hover:border-[#60adad] transition-all duration-300 hover:shadow-xl">
-                <!-- Icon circle -->
                 <div class="w-16 h-16 bg-gradient-to-br from-[#60adad] to-[#4b8e8e] rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -124,63 +139,4 @@ meta_description = "Nowoczesne rozwiązania webowe dla Twojego biznesu"
     </div>
 </section> #}
 
-<!-- CONTACT -->
-<section id="contact" class="relative py-24 bg-gray-50 overflow-hidden">
-    <!-- Subtle background blobs -->
-    <div class="absolute top-20 right-10 w-64 h-64 bg-[#60adad] rounded-full opacity-5 blur-3xl"></div>
-    <div class="absolute bottom-20 left-10 w-80 h-80 bg-[#ffc451] rounded-full opacity-5 blur-3xl"></div>
-    
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#0d1b2a]">Porozmawiajmy o Twoim projekcie</h2>
-        <p class="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">Skontaktuj się z nami, aby omówić Twój pomysł i dowiedzieć się, jak możemy Ci pomóc.</p>
-        
-        <form method="post" data-request="onSendContact" class="grid gap-6 md:grid-cols-2">
-            <!-- Name Input -->
-            <div class="relative group">
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Imię" 
-                    class="p-4 border-2 border-gray-200 rounded-2xl w-full focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50"
-                >
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-            
-            <!-- Email Input -->
-            <div class="relative group">
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Email" 
-                    class="p-4 border-2 border-gray-200 rounded-2xl w-full focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50"
-                >
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-            
-            <!-- Message Textarea -->
-            <div class="relative group md:col-span-2">
-                <textarea 
-                    name="message" 
-                    placeholder="Wiadomość" 
-                    class="p-4 border-2 border-gray-200 rounded-2xl w-full h-40 focus:outline-none focus:border-[#60adad] transition-all duration-300 bg-gradient-to-br from-white to-gray-50 resize-none"
-                ></textarea>
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#60adad] to-[#4b8e8e] opacity-0 group-focus-within:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-            
-            <!-- Submit Button -->
-            <button 
-                type="submit"
-                class="md:col-span-2 relative overflow-hidden group bg-gradient-to-r from-[#ffc451] to-[#ffb731] text-[#0d1b2a] px-10 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-                <span class="relative z-10 flex items-center justify-center gap-2">
-                    Wyślij wiadomość
-                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                </span>
-                <!-- Hover effect -->
-                <div class="absolute inset-0 bg-gradient-to-r from-[#ffb731] to-[#ffc451] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-        </form>
-    </div>
-</section>
+{% component 'genericForm' %}
