@@ -73,4 +73,11 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function registerMailTemplates()
+    {
+        return [
+            'stdevs.toolbox:newsletter' => 'stdevs.toolbox::mail.newsletter'
+        ];
+    }
 }

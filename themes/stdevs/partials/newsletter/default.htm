@@ -1,0 +1,17 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit" class="flex flex-col gap-3">
+
+    {{ form_token() }}
+
+    <input required name="email" type="email" placeholder="Twój email" class="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#60adad] transition">
+
+    <button id="simpleContactSubmitButton" type="submit" class="bg-[#ffc451] text-[#0d1b2a] px-6 py-3 rounded-xl font-semibold hover:bg-[#ffb731] transition">
+        Subskrybuj
+    </button>
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+</form>

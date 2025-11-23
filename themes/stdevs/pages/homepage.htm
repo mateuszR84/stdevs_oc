@@ -28,6 +28,30 @@ recaptcha_theme = "light"
 recaptcha_type = "image"
 recaptcha_size = "normal"
 emails_date_format = "Y-m-d"
+
+[genericForm newsletter]
+rules[email] = "required|email"
+rules_messages[email.email] = "Niepoprawny email!"
+rules_messages[email.required] = "Pole email jest wymagane."
+messages_success = "Formularz został wysłany poprawnie"
+messages_errors = "Wystąpiły błędy przy próbie wysłania formularza"
+mail_enabled = 1
+mail_subject = "StudioDEVS - nowa subskrypcja"
+mail_recipients[kontakt@studiodevs.pl] = "kontakt@studiodevs.pl"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "kontakt@studiodevs.pl"
+mail_resp_subject = "StudioDEVS - subskrypcja newslettera"
+mail_resp_template = "stdevs.toolbox::mail.newsletter"
+reset_form = 1
+redirect = "/"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
 <section class="relative min-h-screen w-full bg-[#0d1b2a] text-white flex items-center">
 
@@ -54,10 +78,10 @@ emails_date_format = "Y-m-d"
                     Skontaktuj się
                 </a>
 
-                <a href="#projects" 
+                {# <a href="#projects" 
                 class="border border-white/30 text-white px-8 py-4 rounded-xl text-lg hover:bg-white/10 transition">
                     Zobacz realizacje
-                </a>
+                </a> #}
             </div>
         </div>
 

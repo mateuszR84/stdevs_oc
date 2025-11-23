@@ -946,6 +946,13 @@
       }
     }
   }
+  .hover\:text-brand-secondary {
+    &:hover {
+      @media (hover: hover) {
+        color: #ffc451;
+      }
+    }
+  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
