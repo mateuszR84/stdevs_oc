@@ -12,7 +12,8 @@
         "rainlab/user-plugin": "^3.1",
         "stdevs/websitesmanager-plugin": "^1.0",
         "studiodevs/nudge-plugin": "^1.0",
-        "blakejones/magicforms-plugin": "^1.6"
+        "blakejones/magicforms-plugin": "^1.6",
+        "offline/oc-gdpr-plugin": "^2.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.5|^9.0"

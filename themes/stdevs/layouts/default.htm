@@ -1,5 +1,10 @@
 description = "Default layout"
 
+[cookieBanner]
+include_css = 1
+update_partial = "gdpr"
+update_selector = "#gdpr-reload"
+cookie_manager_page = "cookies"
 ==
 <!DOCTYPE html>
 <html lang="pl">
@@ -24,6 +29,7 @@ description = "Default layout"
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
     </svg>
 </button>
+{% component 'cookieBanner' %}
 </body>
 
 </html>

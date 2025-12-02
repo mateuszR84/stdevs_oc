@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eed6f41f66a1d8511b081e6e3dc7a1a4",
+    "content-hash": "c358f74a807ee64ea9f972512a0c6160",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4502,6 +4502,31 @@
                 "tailor"
             ],
             "time": "2025-10-11T01:50:10+00:00"
+        },
+        {
+            "name": "offline/oc-gdpr-plugin",
+            "version": "v2.2.30",
+            "dist": {
+                "type": "zip",
+                "url": "https://gateway.octobercms.com/composer/dist/offline/oc-gdpr-plugin/offline-oc-gdpr-plugin-91eb39becc50b32402aee357a4cba6ed873bf4a1-zip-17e4e4.zip",
+                "reference": "91eb39becc50b32402aee357a4cba6ed873bf4a1",
+                "shasum": "94cf3d0063b395dea90fee8da3201074818376ed"
+            },
+            "type": "october-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Kündig",
+                    "email": "tobias@offline.swiss"
+                }
+            ],
+            "description": "October CMS plugin to make websites GDPR and ePrivacy compliant",
+            "support": {
+                "source": "https://github.com/OFFLINE-GmbH/oc-gdpr-plugin/tree/v2.2.30"
+            },
+            "time": "2025-07-09T07:27:40+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
