@@ -25,12 +25,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->timestamps();
         });
-
-        Schema::create('studiodevs_wiki_articles_categories', function ($table) {
-            $table->integer('article_id')->unsigned();
-            $table->integer('category_id')->unsigned();
-            $table->primary(['article_id', 'category_id']);
-        });
     }
 
     /**
@@ -39,6 +33,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('studiodevs_wiki_categories');
-        Schema::dropIfExists('studiodevs_wiki_articles_categories');
     }
 };

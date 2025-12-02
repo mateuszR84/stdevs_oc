@@ -3,6 +3,13 @@ fields:
         label: studiodevs.wiki::lang.models.article.title
         type: text
         span: full
+
+    category:
+        commentAbove: studiodevs.wiki::lang.models.article.categories_desc
+        type: relation
+        nameFrom: title
+        span: left
+
 tabs:
     fields:
         content:
@@ -11,8 +18,3 @@ tabs:
             size: giant
             span: full
             tab: studiodevs.wiki::lang.models.article.tab_content
-        categories:
-            commentAbove: studiodevs.wiki::lang.models.article.categories_desc
-            type: relation
-            nameFrom: title
-            tab: studiodevs.wiki::lang.models.article.tab_categories

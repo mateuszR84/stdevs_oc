@@ -22,8 +22,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug')->index();
-            $table->string('category')->nullable();
             $table->text('content')->nullable();
+            $table->bigInteger('category_id')->unsigned()->nullable();
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });

@@ -9,6 +9,7 @@ module.exports = {
         "./content/**/*.htm",
         "./partials/**/*.htm",
         "../../plugins/studiodevs/collectly/**/*.htm",
+        "../../plugins/studiodevs/wiki/**/*.htm",
     ],
     theme: {
         extend: {

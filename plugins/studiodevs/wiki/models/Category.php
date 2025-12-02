@@ -30,11 +30,9 @@ class Category extends Model
         'title' => 'required',
     ];
 
-    public $belongsToMany = [
+    public $hasMany = [
         'articles' => [
-            'Studiodevs\Wiki\Models\Article',
-            'table' => 'studiodevs_wiki_articles_categories',
-            'order' => 'published_at desc',
+            Article::class,
         ],
         'articles_count' => [
             'Studiodevs\Wiki\Models\Articles',

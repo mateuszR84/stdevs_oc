@@ -4,6 +4,8 @@ namespace StudioDevs\Wiki;
 
 use Backend;
 use System\Classes\PluginBase;
+use StudioDevs\Wiki\Components\ArticlesList;
+use StudioDevs\Wiki\Components\ArticleDetails;
 
 /**
  * Plugin Information File
@@ -46,10 +48,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'StudioDevs\Wiki\Components\MyComponent' => 'myComponent',
+            ArticleDetails::class => 'articleDetails',
+            ArticlesList::class => 'articlesList',
         ];
     }
 
