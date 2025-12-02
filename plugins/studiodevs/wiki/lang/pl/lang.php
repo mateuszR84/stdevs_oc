@@ -19,6 +19,7 @@ return [
         ],
         'category' => [
             'title' => 'Tytuł',
+            'description' => 'Opis',
             'articlesCount' => 'Liczba artykułów'
         ],
     ],

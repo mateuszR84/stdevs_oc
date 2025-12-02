@@ -12,7 +12,7 @@ slug = "{{ :slug }}"
 
 {% if article %}
     <h1 class="text-3xl font-bold mb-4">{{ article.title }}</h1>
-    <h3 class="text-2xl font-bold mb-4">{{ article.category.title }}</h3>
+    <h3 class="text-xl mb-4">Kategoria: <span class="italic">{{ article.category.title }}</span></h3>
 
     <div class="prose prose-lg max-w-none">
         {{ article.content|raw }}

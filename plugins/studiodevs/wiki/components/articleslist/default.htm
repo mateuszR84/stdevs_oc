@@ -6,15 +6,22 @@
     {% for category in categories %}
         <div x-data="{ open: false }" class="border-b pb-2">
             <!-- Nagłówek kategorii -->
-            <button @click="open = !open" class="w-full flex items-center justify-between text-left">
-                <span class="text-lg font-semibold text-gray-800">
-                    {{ category.title }}
-                </span>
-
-                <!-- Ikonka rotująca -->
-                <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" :class="{ 'rotate-90': open }" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+            <button @click="open = !open" class="w-full text-left">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1">
+                        <div class="text-lg font-semibold text-gray-800">
+                            {{ category.title }}
+                        </div>
+                        <div class="mt-2 text-sm text-gray-600">
+                            {{ category.description }}
+                        </div>
+                    </div>
+                    
+                    <!-- Ikonka rotująca -->
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ml-4" :class="{ 'rotate-90': open }" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
             </button>
 
             <!-- Lista artykułów (zwijana) -->
