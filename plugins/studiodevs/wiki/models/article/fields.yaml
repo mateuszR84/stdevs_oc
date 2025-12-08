@@ -5,10 +5,20 @@ fields:
         span: full
 
     category:
-        commentAbove: studiodevs.wiki::lang.models.article.categories_desc
+        label: studiodevs.wiki::lang.models.article.category
         type: relation
         nameFrom: title
         span: left
+        emptyOption: studiodevs.wiki::lang.models.article.category_empty
+    
+    tags:
+        label: studiodevs.wiki::lang.models.article.tags
+        type: taglist
+        span: right
+        mode: relation
+        separator: comma
+        nameFrom: name
+        valueFrom: id
 
 tabs:
     fields:

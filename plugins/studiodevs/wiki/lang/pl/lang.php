@@ -4,12 +4,16 @@ return [
     'navigation' => [
         'new_article' => 'Nowy artykuł',
         'articles' => 'Artykuły',
-        'categories' => 'Kategorie'
+        'categories' => 'Kategorie',
+        'tags' => 'Tagi'
     ],
     'models' => [
         'article' => [
             'title' => 'Tytuł',
             'categories' => 'Kategorie',
+            'category' => 'Kategoria',
+            'category_empty' => '-- Wybierz kategorię --',
+            'tags' => 'Tagi',
             'categories_desc' => 'Wybierz spośród kategorii',
             'content_desc' => 'Edytuj treść artykułu',
             'content' => 'Treść',
@@ -22,5 +26,8 @@ return [
             'description' => 'Opis',
             'articlesCount' => 'Liczba artykułów'
         ],
+        'tag' => [
+            'name' => 'Nazwa'
+        ]
     ],
 ];

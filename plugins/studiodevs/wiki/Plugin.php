@@ -100,6 +100,12 @@ class Plugin extends PluginBase
                         'icon' => 'icon-filter',
                         'url' => Backend::url('studiodevs/wiki/categories'),
                     ],
+
+                    'tags' => [
+                        'label' => 'studiodevs.wiki::lang.navigation.tags',
+                        'icon' => 'icon-tag',
+                        'url' => Backend::url('studiodevs/wiki/tags'),
+                    ],
                 ]
             ],
         ];

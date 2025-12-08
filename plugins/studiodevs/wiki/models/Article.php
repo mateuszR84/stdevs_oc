@@ -3,6 +3,7 @@
 namespace StudioDevs\Wiki\Models;
 
 use Model;
+use StudioDevs\Wiki\Models\Tag;
 
 /**
  * Article Model
@@ -35,4 +36,22 @@ class Article extends Model
             Category::class,
         ]
     ];
+
+    public $belongsToMany = [
+        'tags' => [
+            Tag::class,
+            'table' => 'studiodevs_wiki_article_tag',
+            'key' => 'article_id',
+            'otherKey' => 'tag_id'
+        ]
+    ];
+
+    public function beforeSave()
+    {
+        trace_log(post());    
+    }
+    public function afterSave()
+    {
+        trace_log($this->tags);    
+    }
 }

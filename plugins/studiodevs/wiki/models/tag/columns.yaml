@@ -1,0 +1,9 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: studiodevs.wiki::lang.models.tag.name
+        type: text
+        span: full

@@ -6,3 +6,4 @@ v1.1.0:
     - 1_1_0_create_articles_table.php
     - 1_1_0_create_categories_table.php
     - 1_1_0_seed_categories_table.php
+    - 1_1_0_create_tags_table.php
