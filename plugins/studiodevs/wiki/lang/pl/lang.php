@@ -27,7 +27,8 @@ return [
             'articlesCount' => 'Liczba artykułów'
         ],
         'tag' => [
-            'name' => 'Nazwa'
+            'name' => 'Nazwa',
+            'color' => 'Kolor'
         ]
     ],
 ];

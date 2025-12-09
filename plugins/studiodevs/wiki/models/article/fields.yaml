@@ -16,9 +16,8 @@ fields:
         type: taglist
         span: right
         mode: relation
-        separator: comma
         nameFrom: name
-        valueFrom: id
+        useKey: false
 
 tabs:
     fields:

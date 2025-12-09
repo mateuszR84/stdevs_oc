@@ -22,12 +22,15 @@ class Tag extends Model
     /**
      * @var array rules for validation
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required|string|min:2|max:20',
+        'color' => 'required'
+    ];
 
     public $belongsToMany = [
         'articles' => [
             Article::class,
-            'tags' => 'studiodevs_wiki_article_tag',
+            'table' => 'studiodevs_wiki_article_tag',
             'key' => 'tag_id',
             'otherKey' => 'article_id'
         ]

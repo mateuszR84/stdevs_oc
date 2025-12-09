@@ -19,12 +19,13 @@ return new class extends Migration
         Schema::create('studiodevs_wiki_tags', function(Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('color');
             $table->timestamps();
         });
 
         Schema::create('studiodevs_wiki_article_tag', function ($table) {
-            $table->integer('article_id')->unsigned()->index();
-            $table->integer('tag_id')->unsigned()->index();
+            $table->bigInteger('article_id')->unsigned()->index();
+            $table->bigInteger('tag_id')->unsigned()->index();
             $table->primary(['article_id', 'tag_id']);
         });
 

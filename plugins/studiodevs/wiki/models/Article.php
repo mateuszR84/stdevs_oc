@@ -45,13 +45,4 @@ class Article extends Model
             'otherKey' => 'tag_id'
         ]
     ];
-
-    public function beforeSave()
-    {
-        trace_log(post());    
-    }
-    public function afterSave()
-    {
-        trace_log($this->tags);    
-    }
 }
