@@ -6,6 +6,7 @@ use Backend;
 use System\Classes\PluginBase;
 use StudioDevs\Wiki\Components\ArticlesList;
 use StudioDevs\Wiki\Components\ArticleDetails;
+use StudioDevs\Wiki\Components\TagArticlesList;
 
 /**
  * Plugin Information File
@@ -51,6 +52,7 @@ class Plugin extends PluginBase
         return [
             ArticleDetails::class => 'articleDetails',
             ArticlesList::class => 'articlesList',
+            TagArticlesList::class => 'tagArticlesList',
         ];
     }
 

@@ -13,11 +13,16 @@ use StudioDevs\Wiki\Models\Article;
 class Tag extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sluggable;
 
     /**
      * @var string table name
      */
     public $table = 'studiodevs_wiki_tags';
+
+    protected $slugs = [
+        'slug' => 'name',
+    ];
 
     /**
      * @var array rules for validation
