@@ -30,6 +30,13 @@ module.exports = {
                     text: "#1b1f23",
                     bg_secondary: "#ffc451",
                     bg_tertiary: "#ffd074",
+                },
+                wiki: {
+                    primary: "#594157",
+                    secondary: "#726DA8",
+                    tertiary: "#7D8CC4",
+                    accent: "#A0D2DB",
+                    accent_secondary: "#bee7e8"
                 }
             },
             fontFamily: {
