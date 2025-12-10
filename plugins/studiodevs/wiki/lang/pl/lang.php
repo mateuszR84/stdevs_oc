@@ -31,4 +31,11 @@ return [
             'color' => 'Kolor'
         ]
     ],
+    'components' => [
+        'category_articles_list' => [
+            'properties' => [
+                'categorySlug' => 'Alias kategorii'
+            ],
+        ],
+    ],
 ];

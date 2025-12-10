@@ -38,9 +38,7 @@ class TagArticlesList extends ComponentBase
     {
         $slug = $this->property('slug');
 
-        $this->tag = Tag::where('slug', $slug)
-            ->with('articles.category') // aby od razu pobrać kategorię jeśli chcesz
-            ->first();
+        $this->tag = Tag::where('slug', $slug)->with('articles.category')->first();
 
         if ($this->tag) {
             $this->articles = $this->tag->articles;

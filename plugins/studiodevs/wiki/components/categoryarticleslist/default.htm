@@ -1,0 +1,9 @@
+<h3 class="text-3xl font-bold mb-6">Lista artykułów w kategorii {{ __SELF__.category.title }}</h3>
+
+{% for article in __SELF__.articles %}
+    <li>
+        <a href="{{ 'wiki/article'|page({ slug: article.slug }) }}" class="block text-gray-700 hover:text-gray-900 hover:underline">
+            {{ article.title }}
+        </a>
+    </li>
+{% endfor %}
