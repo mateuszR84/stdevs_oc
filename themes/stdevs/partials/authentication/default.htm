@@ -1,0 +1,43 @@
+{{ form_ajax('onLogin', {
+    'data-request-validate': true,
+}) }}
+<section class="min-h-screen flex items-center justify-center bg-[#0d1b2a] text-white relative overflow-hidden">
+
+    <!-- Dekoracyjne bloby -->
+    <div class="absolute top-10 left-10 w-28 h-28 bg-[#60adad] rounded-full opacity-20 blur-2xl"></div>
+    <div class="absolute bottom-10 right-20 w-40 h-40 bg-[#ffc451] rounded-full opacity-20 blur-3xl"></div>
+
+    <div class="relative z-10 w-full max-w-md p-10 bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/10">
+        
+        <h2 class="text-3xl font-bold mb-6 text-center">Logowanie</h2>
+
+        <form>
+
+            <div class="mb-5">
+                <label class="block text-gray-300 mb-2 text-sm">Nazwa użytkownika</label>
+                <input type="text" name="username" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-gray-400 text-white
+                       focus:ring-2 focus:ring-[#60adad] focus:outline-none transition" placeholder="podaj e-mail">
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-300 mb-2 text-sm">Hasło</label>
+                <input type="password" name="password" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-gray-400 text-white
+                       focus:ring-2 focus:ring-[#60adad] focus:outline-none transition" placeholder="••••••••">
+            </div>
+
+            <button class="w-full bg-[#60adad] hover:bg-[#4b8e8e] text-white py-3 rounded-xl text-lg font-semibold shadow-md transition">
+                Zaloguj się
+            </button>
+
+            <input type="text" name="redirect" value="user-dashboard" hidden></input>
+
+            <p class="text-center text-gray-400 text-sm mt-6">
+                Nie masz konta? 
+                <a href="/register" class="text-[#ffc451] hover:underline">Zarejestruj się</a>
+            </p>
+
+        </form>
+    </div>
+</section>
+
+{{ form_close() }}
