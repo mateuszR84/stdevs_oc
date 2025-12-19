@@ -20,7 +20,7 @@
         <div class="flex items-center gap-4">
 
             {% if user %}
-                {# ----------------- AVATAR USERA ----------------- #}
+                <a href="{{ 'user-dashboard'|page }}" class="text-white/80 hover:text-brand-secondary transition ml-2">Panel</a>
                 <a href="{{ 'profile'|page }}" class="hidden md:block">
                     {% if user.avatar %}
                         <img src="{{ user.avatar.thumb(60,60,{'mode':'crop'}) }}"
