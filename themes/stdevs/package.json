@@ -13,6 +13,7 @@
   "type": "commonjs",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.16",
+    "highlight.js": "^11.11.1",
     "tailwindcss": "^4.1.14"
   }
 }

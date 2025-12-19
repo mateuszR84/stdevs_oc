@@ -1,0 +1,43 @@
+{% set articles = __SELF__.articles %}
+{% set categories = __SELF__.categories %}
+
+<div class="space-y-4">
+
+    {% for category in categories %}
+        <div x-data="{ open: false }" class="border-b pb-2">
+            <!-- Nagłówek kategorii -->
+            <button @click="open = !open" class="w-full text-left">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1">
+                        <div class="text-lg font-semibold text-gray-800">
+                            {{ category.title }}
+                        </div>
+                        <div class="mt-2 text-sm text-gray-600">
+                            {{ category.description }}
+                        </div>
+                    </div>
+                    
+                    <!-- Ikonka rotująca -->
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ml-4" :class="{ 'rotate-90': open }" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </button>
+
+            <!-- Lista artykułów (zwijana) -->
+            <ul id="categoriesList" x-show="open" x-collapse class="mt-2 ml-2 border-l pl-4 space-y-1">
+                {% for article in category.articles %}
+                    <li>
+                        <a href="{{ 'wiki/article'|page({ slug: article.slug }) }}" class="block text-gray-700 hover:text-gray-900 hover:underline">
+                            {{ article.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    {% endfor %}
+
+</div>
+
+

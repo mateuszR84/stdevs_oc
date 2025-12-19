@@ -22,6 +22,10 @@ plugins/*
 plugins/stdevs/*
 !plugins/stdevs/toolbox/
 
+!plugins/studiodevs/
+plugins/studiodevs/*
+!plugins/studiodevs/wiki/
+
 # Miscellaneous rules
 # ----------------------------------------------------------
 # Ignore everything in the storage folders

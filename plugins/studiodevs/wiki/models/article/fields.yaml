@@ -1,0 +1,29 @@
+fields:
+    title:
+        label: studiodevs.wiki::lang.models.article.title
+        type: text
+        span: full
+
+    category:
+        label: studiodevs.wiki::lang.models.article.category
+        type: relation
+        nameFrom: title
+        span: left
+        emptyOption: studiodevs.wiki::lang.models.article.category_empty
+    
+    tags:
+        label: studiodevs.wiki::lang.models.article.tags
+        type: taglist
+        span: right
+        mode: relation
+        nameFrom: name
+        useKey: false
+
+tabs:
+    fields:
+        content:
+            commentAbove: studiodevs.wiki::lang.models.article.content_desc
+            type: richeditor
+            size: giant
+            span: full
+            tab: studiodevs.wiki::lang.models.article.tab_content

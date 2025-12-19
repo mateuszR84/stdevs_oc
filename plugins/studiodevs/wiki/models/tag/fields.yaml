@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: studiodevs.wiki::lang.models.tag.name
+        type: text
+        span: left
+
+    color:
+        label: studiodevs.wiki::lang.models.tag.color
+        type: colorpicker
+        span: left

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Article
+
+# Model Form Field configuration
+form: $/studiodevs/wiki/models/article/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Wiki\Models\Article
+
+# Default redirect location
+defaultRedirect: studiodevs/wiki/articles
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/wiki/articles/update/:id
+    redirectClose: studiodevs/wiki/articles
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/wiki/articles
+    redirectClose: studiodevs/wiki/articles
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
