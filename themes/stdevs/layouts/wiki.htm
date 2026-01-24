@@ -1,0 +1,96 @@
+description = 'Wiki Layout'
+
+[articlesList]
+==
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    {% partial 'common/meta' %}
+    <script src="{{ ['@framework','@framework.extras'] |theme}}"></script>
+
+    {# highlight.js #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    {# ================= NAVBAR ================= #}
+    <nav class="bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+        <div class="mx-auto px-6 py-4 flex items-center justify-between">
+
+            <a href="{{ 'homepage'|page }}" class="flex items-center">
+                <h2 class="text-2xl flex items-center text-white">
+                    <span class="text-[#60adad]">Studio</span>
+                    <span class="text-[#ffc451]">DEVS</span>
+                    
+            </a>
+                    <span class="ml-1 px-2 py-0.5 border border-gray-950 text-wiki-tertiary rounded-lg bg-white/20 backdrop-blur-sm">
+                        Wiki
+                    </span>
+                </h2>
+
+            <!-- SEARCH -->
+            <div class="flex-1 flex justify-center px-8">
+                <div class="relative w-full max-w-lg">
+                <input 
+                    type="text"
+                    placeholder="Szukaj w wiki..."
+                    class="w-full px-4 py-2 pr-10 rounded-xl border border-gray-300 bg-white shadow-sm
+                        focus:ring-2 focus:ring-wiki-accent_secondary focus:border-transparent focus:outline-none transition"
+                >
+
+                    <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                         fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div>
+                <a href="{{ 'wiki/main'|page }}"
+                   class="text-gray-700 hover:text-wiki-primary font-medium transition-colors">
+                    Strona główna
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="flex w-full">
+
+        {# ================= SIDEBAR ================= #}
+        <aside class="w-80 min-h-screen border-r border-gray-200 bg-white/70 backdrop-blur-xl
+                       p-6 overflow-y-auto shadow-sm">
+
+            <h3 class="text-lg font-semibold text-gray-900 mb-4 tracking-tight flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="text-wiki-primary w-6 h-6" fill="currentColor">
+                    <path d="M296.5 69.2C311.4 62.3 328.6 62.3 343.5 69.2L562.1 170.2C570.6 174.1 576 182.6 576 192C576 201.4 570.6 209.9 562.1 213.8L343.5 314.8C328.6 321.7 311.4 321.7 296.5 314.8L77.9 213.8C69.4 209.8 64 201.3 64 192C64 182.7 69.4 174.1 77.9 170.2L296.5 69.2zM112.1 282.4L276.4 358.3C304.1 371.1 336 371.1 363.7 358.3L528 282.4L562.1 298.2C570.6 302.1 576 310.6 576 320C576 329.4 570.6 337.9 562.1 341.8L343.5 442.8C328.6 449.7 311.4 449.7 296.5 442.8L77.9 341.8C69.4 337.8 64 329.3 64 320C64 310.7 69.4 302.1 77.9 298.2L112 282.4zM77.9 426.2L112 410.4L276.3 486.3C304 499.1 335.9 499.1 363.6 486.3L527.9 410.4L562 426.2C570.5 430.1 575.9 438.6 575.9 448C575.9 457.4 570.5 465.9 562 469.8L343.4 570.8C328.5 577.7 311.3 577.7 296.4 570.8L77.9 469.8C69.4 465.8 64 457.3 64 448C64 438.7 69.4 430.1 77.9 426.2z"/>
+                </svg>
+            </h3>
+
+            <div class="space-y-1">
+                {% component 'articlesList' %}
+            </div>
+
+        </aside>
+
+
+        {# ================= MAIN CONTENT ================= #}
+        <main class="flex-1 p-10">
+
+            <div class="bg-white shadow-lg rounded-2xl p-10 border border-gray-200">
+                {% page %}
+            </div>
+
+        </main>
+
+    </div>
+
+    {% scripts %}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>

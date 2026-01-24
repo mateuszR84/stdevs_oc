@@ -1,0 +1,11 @@
+fields:
+    title:
+        label: studiodevs.wiki::lang.models.category.title
+        span: left
+
+    description:
+        label: studiodevs.wiki::lang.models.category.description
+        size: large
+        span: full
+        type: textarea
+

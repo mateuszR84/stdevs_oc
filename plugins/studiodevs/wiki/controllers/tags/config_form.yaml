@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tag
+
+# Model Form Field configuration
+form: $/studiodevs/wiki/models/tag/fields.yaml
+
+# Model Class name
+modelClass: StudioDevs\Wiki\Models\Tag
+
+# Default redirect location
+defaultRedirect: studiodevs/wiki/tags
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studiodevs/wiki/tags/update/:id
+    redirectClose: studiodevs/wiki/tags
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studiodevs/wiki/tags
+    redirectClose: studiodevs/wiki/tags
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

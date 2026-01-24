@@ -1,0 +1,8 @@
+columns:
+    title:
+        label: studiodevs.wiki::lang.models.article.title
+    categories:
+        label: studiodevs.wiki::lang.models.article.categories
+    updated_at:
+        label: studiodevs.wiki::lang.models.article.updated_at
+        type: datetime
